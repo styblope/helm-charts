@@ -1,0 +1,12 @@
+apiVersion: v1
+entries:
+  sock-shop:
+  - apiVersion: v1
+    created: 2018-12-10T14:35:50.633956141+01:00
+    description: A Helm chart for Sock Shop
+    digest: 8118cd3ef03fdf90cde6b1c3f594f03b2870d1a50b9d10ea329146372e278a46
+    name: sock-shop
+    urls:
+    - sock-shop/sock-shop-0.2.0.tgz
+    version: 0.2.0
+generated: 2018-12-10T14:35:50.633467812+01:00
