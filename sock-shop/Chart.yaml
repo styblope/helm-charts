@@ -2,4 +2,7 @@ apiVersion: v1
 description: A Helm chart for Sock Shop
 name: sock-shop
 version: 0.2.0
+home: https://microservices-demo.github.io
+sources:
+  - https://github.com/microservices-demo
 icon: https://raw.githubusercontent.com/styblope/helm-charts/master/sock-shop/icon.png

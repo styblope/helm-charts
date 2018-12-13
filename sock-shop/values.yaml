@@ -11,3 +11,5 @@ frontend:
 loadtest:
   replicas: 2
   enabled: false
+ingress:
+  enabled: true
