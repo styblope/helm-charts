@@ -1,0 +1,38 @@
+java:
+  options:
+    __metadata:
+      label: Java options
+      type: string
+      required: true
+zipkin: 
+  __metadata:
+    label: "Zipkin"
+  enabled:  false
+    __metadata:
+      label: "Enabled"
+      type: boolean
+      required: true
+  url:
+    __metadata:
+      label: "URL"
+      type: string
+      required: true
+frontend:
+  replicas:
+    __metadata:
+      label: "Frontend replicas"
+      type: number
+      required: true
+loadtest:
+  __metadata:
+    label: "Load test"
+  replicas:
+    __metadata:
+      label: "Replicas"
+      type: number
+      required: true
+  enabled: false
+    __metadata:
+      label: "Enabled"
+      type: boolean
+      required: true
