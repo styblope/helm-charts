@@ -1,38 +1,31 @@
 java:
   options:
     __metadata:
-      label: Java options
       type: string
-      required: true
+frontend:
+  replicas:
+    __metadata:
+      type: number
 zipkin: 
-  __metadata:
-    label: "Zipkin"
   enabled:
     __metadata:
-      label: "Enabled"
       type: boolean
-      required: true
   url:
     __metadata:
       label: "URL"
       type: string
-      required: true
-frontend:
-  replicas:
-    __metadata:
-      label: "Frontend replicas"
-      type: number
-      required: true
 loadtest:
+  enabled:
+    __metadata:
+      type: boolean
   __metadata:
     label: "Load test"
   replicas:
     __metadata:
       label: "Replicas"
       type: number
-      required: true
+ingress:
   enabled:
     __metadata:
-      label: "Enabled"
       type: boolean
-      required: true
+      immutable: true
