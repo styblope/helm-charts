@@ -2,11 +2,12 @@ apiVersion: v1
 entries:
   icp-openldap:
   - apiVersion: v1
-    created: 2019-01-10T10:35:22.373248379+01:00
+    created: 2019-01-10T11:03:19.956812319+01:00
     description: A OpenLDAP Chart for Kubernetes
-    digest: 6c20647023ad21ce7f87c95e0c97ec985fd16f30ef6af687c080e46d9e90af77
+    digest: f019e4763e443900ae6737c43cbc67a5bc62d3c06826c18f720dc06adfdc57b9
     engine: gotpl
     home: https://www.openldap.ort
+    icon: https://raw.githubusercontent.com/styblope/helm-charts/master/icp-openldap/icon.png
     keywords:
     - ldap
     maintainers:
@@ -20,7 +21,7 @@ entries:
     version: 0.1.5
   sock-shop:
   - apiVersion: v1
-    created: 2019-01-10T10:35:22.374309618+01:00
+    created: 2019-01-10T11:03:19.957844565+01:00
     description: A Helm chart for Sock Shop
     digest: 5a245d89a3192e88ee381a94c952e9601532eda0b70abdeef8b9704709ecb42a
     home: https://microservices-demo.github.io
@@ -31,4 +32,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/styblope/helm-charts/master/sock-shop-0.2.0.tgz
     version: 0.2.0
-generated: 2019-01-10T10:35:22.372819509+01:00
+generated: 2019-01-10T11:03:19.955982379+01:00
