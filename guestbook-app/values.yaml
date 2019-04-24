@@ -5,6 +5,8 @@ appInClusterNamespace: default
 targetCluster:
   labelSelector:
     matchLabels:
+      name: ""
+      owner: marketing
       environment: Dev
   resourceSelector:
     type: cpu
