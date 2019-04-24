@@ -11,4 +11,4 @@ Package the chart
 Update repo index
 
     cd ..
-    helm repo index --url https://raw.githubusercontent.com/styblope/helm-charts/master
+    helm repo index --url https://raw.githubusercontent.com/styblope/helm-charts/master .
