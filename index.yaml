@@ -1,8 +1,18 @@
 apiVersion: v1
 entries:
+  guestbook-app:
+  - apiVersion: v1
+    created: 2019-04-24T17:41:15.402836442+02:00
+    description: A Helm chart for Kubernetes
+    digest: a262e1db45afdb26e998cf7cd0f4566cfebe9c6f7b4b59f7fc5c0ffdcd6b7fca
+    icon: https://raw.githubusercontent.com/styblope/helm-charts/master/guestbook-app/icon.png
+    name: guestbook-app
+    urls:
+    - https://raw.githubusercontent.com/styblope/helm-charts/master/guestbook-app-0.1.0.tgz
+    version: 0.1.0
   icp-openldap:
   - apiVersion: v1
-    created: 2019-01-10T11:03:19.956812319+01:00
+    created: 2019-04-24T17:41:15.403759467+02:00
     description: A OpenLDAP Chart for Kubernetes
     digest: f019e4763e443900ae6737c43cbc67a5bc62d3c06826c18f720dc06adfdc57b9
     engine: gotpl
@@ -21,7 +31,7 @@ entries:
     version: 0.1.5
   sock-shop:
   - apiVersion: v1
-    created: 2019-01-10T11:03:19.957844565+01:00
+    created: 2019-04-24T17:41:15.405054115+02:00
     description: A Helm chart for Sock Shop
     digest: 5a245d89a3192e88ee381a94c952e9601532eda0b70abdeef8b9704709ecb42a
     home: https://microservices-demo.github.io
@@ -32,4 +42,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/styblope/helm-charts/master/sock-shop-0.2.0.tgz
     version: 0.2.0
-generated: 2019-01-10T11:03:19.955982379+01:00
+generated: 2019-04-24T17:41:15.401875826+02:00

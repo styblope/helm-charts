@@ -1,0 +1,12 @@
+replicaCount: 1
+
+appInClusterNamespace: default
+
+targetCluster:
+  labelSelector:
+    matchLabels:
+      environment: Dev
+  resourceSelector:
+    type: cpu
+  compliances:
+  - devcpl
