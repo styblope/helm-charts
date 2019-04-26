@@ -9,5 +9,4 @@ targetCluster:
       environment: Dev
   resourceSelector:
     type: cpu
-  compliances:
-  - default
+  compliances: {}
