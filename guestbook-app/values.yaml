@@ -10,3 +10,4 @@ targetCluster:
   resourceSelector:
     type: cpu
   compliances:
+  - default
