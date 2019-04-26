@@ -10,4 +10,3 @@ targetCluster:
   resourceSelector:
     type: cpu
   compliances:
-  - devcpl
