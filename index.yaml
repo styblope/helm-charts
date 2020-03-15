@@ -3,7 +3,21 @@ entries:
   bookinfo:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2020-03-15T22:45:51.123706709+01:00
+    created: 2020-03-15T22:59:48.742744296+01:00
+    description: The Istio example application
+    digest: ddae8c4daad8668d8a7523b2675ecfb2b80458a89ede190aa187ed40eeab2c06
+    keywords:
+    - sample
+    - bookinfo
+    - istio
+    - demo
+    name: bookinfo
+    urls:
+    - https://raw.githubusercontent.com/styblope/helm-charts/master/bookinfo-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2020-03-15T22:59:48.742117165+01:00
     description: The Istio example application
     digest: a9141dbf958e4141200484185dcf4a844c8c4874efc32635cd20e8a4fda82b84
     keywords:
@@ -17,7 +31,7 @@ entries:
     version: 0.1.0
   guestbook-app:
   - apiVersion: v1
-    created: 2020-03-15T22:45:51.124327203+01:00
+    created: 2020-03-15T22:59:48.743375084+01:00
     description: A Helm chart for Kubernetes
     digest: 2b167aa24cfb29a66468505fbc0151e0141d722f0a846365fea418db94d907e2
     icon: https://raw.githubusercontent.com/styblope/helm-charts/master/guestbook-app/icon.png
@@ -27,7 +41,7 @@ entries:
     version: 0.1.0
   icp-openldap:
   - apiVersion: v1
-    created: 2020-03-15T22:45:51.125028344+01:00
+    created: 2020-03-15T22:59:48.744666777+01:00
     description: A OpenLDAP Chart for Kubernetes
     digest: f019e4763e443900ae6737c43cbc67a5bc62d3c06826c18f720dc06adfdc57b9
     engine: gotpl
@@ -46,7 +60,7 @@ entries:
     version: 0.1.5
   sock-shop:
   - apiVersion: v1
-    created: 2020-03-15T22:45:51.126045249+01:00
+    created: 2020-03-15T22:59:48.745960322+01:00
     description: A Helm chart for Sock Shop
     digest: 5a245d89a3192e88ee381a94c952e9601532eda0b70abdeef8b9704709ecb42a
     home: https://microservices-demo.github.io
@@ -57,4 +71,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/styblope/helm-charts/master/sock-shop-0.2.0.tgz
     version: 0.2.0
-generated: 2020-03-15T22:45:51.122941465+01:00
+generated: 2020-03-15T22:59:48.741296752+01:00
