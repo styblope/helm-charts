@@ -3,9 +3,9 @@ entries:
   bookinfo:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2020-03-15T20:50:04.548109371+01:00
+    created: 2020-03-15T22:01:56.54192675+01:00
     description: The Istio example application
-    digest: b79fe606fa084aeff24b07d6717798602074e2f9fb1954a27fd55ca6c4c304b0
+    digest: dddac25c14222b9873f6c33dd41eb38b445f5025c236b92b1caac98c8ce7cf57
     keywords:
     - sample
     - bookinfo
@@ -17,7 +17,7 @@ entries:
     version: 0.1.0
   guestbook-app:
   - apiVersion: v1
-    created: 2020-03-15T20:50:04.548775768+01:00
+    created: 2020-03-15T22:01:56.54258835+01:00
     description: A Helm chart for Kubernetes
     digest: 2b167aa24cfb29a66468505fbc0151e0141d722f0a846365fea418db94d907e2
     icon: https://raw.githubusercontent.com/styblope/helm-charts/master/guestbook-app/icon.png
@@ -27,7 +27,7 @@ entries:
     version: 0.1.0
   icp-openldap:
   - apiVersion: v1
-    created: 2020-03-15T20:50:04.549458259+01:00
+    created: 2020-03-15T22:01:56.543295311+01:00
     description: A OpenLDAP Chart for Kubernetes
     digest: f019e4763e443900ae6737c43cbc67a5bc62d3c06826c18f720dc06adfdc57b9
     engine: gotpl
@@ -46,7 +46,7 @@ entries:
     version: 0.1.5
   sock-shop:
   - apiVersion: v1
-    created: 2020-03-15T20:50:04.550483893+01:00
+    created: 2020-03-15T22:01:56.544334037+01:00
     description: A Helm chart for Sock Shop
     digest: 5a245d89a3192e88ee381a94c952e9601532eda0b70abdeef8b9704709ecb42a
     home: https://microservices-demo.github.io
@@ -57,4 +57,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/styblope/helm-charts/master/sock-shop-0.2.0.tgz
     version: 0.2.0
-generated: 2020-03-15T20:50:04.547478656+01:00
+generated: 2020-03-15T22:01:56.541332018+01:00

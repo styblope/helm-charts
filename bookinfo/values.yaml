@@ -11,8 +11,7 @@ productpage:
   version:
   replicas:
 
-# OpenShift route
-route:
+openshift-route:
   enabled: true
   service:
     name: productpage
