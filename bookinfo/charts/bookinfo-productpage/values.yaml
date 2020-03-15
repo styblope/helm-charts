@@ -1,0 +1,10 @@
+# v1 is currently the only product page version available trhough Istio repository
+version: v1
+replicas: 1
+# Enable Liveness and Readiness probes
+probesEnabled: false
+service:
+  # Enable creation of service and serviceaccount
+  enabled: true
+  type: ClusterIP
+  port: 9080

@@ -1,0 +1,49 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  metadata:
+  name: details-{{ .Values.version }}
+  labels:
+    app: details
+    version: "{{ .Values.version }}"
+    chart: {{ template "bookinfo-details.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: details
+      version: "{{ .Values.version }}"
+  template:
+    metadata:
+      labels:
+        app: details
+        version: "{{ .Values.version }}"
+        chart: {{ template "bookinfo-details.chart" . }}
+        release: {{ .Release.Name }}
+        heritage: {{ .Release.Service }}
+    spec:
+      serviceAccountName: bookinfo-details
+      containers:
+      - name: details
+        image: istio/examples-bookinfo-details-{{ .Values.version }}:latest 
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: http
+          containerPort: 9080
+          protocol: TCP
+        {{- if .Values.probesEnabled }}
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 9080
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 9080
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        {{- end }}
