@@ -1,13 +1,13 @@
-details:
+bookinfo-details:
   version:
   replicas:
-ratings:
+bookinfo-ratings:
   version:
   replicas:
-reviews:
+bookinfo-reviews:
   version:
   replicas:
-productpage:
+bookinfo-productpage:
   version:
   replicas:
 
