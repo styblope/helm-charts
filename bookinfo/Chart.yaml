@@ -9,8 +9,3 @@ keywords:
   - bookinfo
   - istio
   - demo
-dependencies:
-  - name: openshift-route
-    version: "1.1.1"
-    condition: openshift-route.enabled
-    repository: https://charts.appuio.ch

@@ -13,5 +13,6 @@ bookinfo-productpage:
 
 openshift-route:
   enabled: true
+  fullnameOverride: bookinfo
   service:
     name: productpage
