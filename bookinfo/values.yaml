@@ -1,5 +1,18 @@
 details:
+  version:
+  replicas:
 ratings:
+  version:
+  replicas:
 reviews:
+  version:
+  replicas:
 productpage:
+  version:
+  replicas:
 
+# OpenShift route
+route:
+  enabled: true
+  service:
+    name: productpage
