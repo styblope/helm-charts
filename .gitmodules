@@ -1,3 +1,0 @@
-[submodule "icp-openldap"]
-	path = icp-openldap
-	url = https://github.com/styblope/icp-openldap.git
