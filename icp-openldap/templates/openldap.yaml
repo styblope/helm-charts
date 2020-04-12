@@ -33,15 +33,15 @@ spec:
     spec:
       initContainers:
         - name: init-copy
-          image: busybox
+          image: {{.Values.openLdap.image}}:{{.Values.openLdap.imageTag}}
           command: ['sh','-c','cp /config-map/* /config-storage; ls -lrt /config-storage']
           volumeMounts:
-          - name: {{.Release.Name}}-seedusers
+          - name: seedusers
             mountPath: /config-map
           - name: config-storage
             mountPath: /config-storage
       containers:
-        - name: {{.Release.Name}}
+        - name: openldap
           image: osixia/openldap:1.1.10
           args: ["--loglevel", "debug"]
           volumeMounts:
@@ -58,18 +58,35 @@ spec:
             - name: LDAP_ORGANISATION
               value: "Example Inc."
             - name: LDAP_DOMAIN
-              value: "{{.Values.OpenLdap.Domain}}"
+              value: "{{.Values.openLdap.Domain}}"
             - name: LDAP_ADMIN_PASSWORD
-              value: "{{.Values.OpenLdap.AdminPassword}}"
+              value: "{{.Values.openLdap.AdminPassword}}"
             - name: LDAP_REMOVE_CONFIG_AFTER_SETUP
               value: "false"
       volumes:
         - name: config-storage
           emptyDir: {}
         - name: ldap-certs
-          hostPath:
-            path: "/data/ldap/certs"
-        - name: {{.Release.Name}}-seedusers
+          {{- if .Values.openLdap.persistence.enabled }}
+          persistentVolumeClaim:
+            claimName: {{.Release.Name}}-certs
+          {{- else }}
+          emptyDir: {}
+          {{- end }}
+        - name: seedusers
           configMap:
             name: {{.Release.Name}}-seedusers
-
+---
+{{- if .Values.openLdap.persistence.enabled }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{.Release.Name}}-certs
+spec:
+  storageClassName: {{.Values.openLdap.persistence.storageClassName}}
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Mi
+{{- end }}
