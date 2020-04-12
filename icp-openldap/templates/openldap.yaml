@@ -42,7 +42,7 @@ spec:
             mountPath: /config-storage
       containers:
         - name: openldap
-          image: osixia/openldap:1.1.10
+          image: {{.Values.openLdap.image}}:{{.Values.openLdap.imageTag}} 
           args: ["--loglevel", "debug"]
           volumeMounts:
             - name: config-storage
@@ -63,6 +63,8 @@ spec:
               value: "{{.Values.openLdap.AdminPassword}}"
             - name: LDAP_REMOVE_CONFIG_AFTER_SETUP
               value: "false"
+            - name: DISABLE_CHOWN
+              value: "true"
       volumes:
         - name: config-storage
           emptyDir: {}

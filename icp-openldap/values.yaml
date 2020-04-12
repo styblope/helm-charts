@@ -1,6 +1,6 @@
 openLdap:
   image: "docker.io/osixia/openldap"
-  imageTag: "latest"
+  imageTag: "1.1.10"
   imagePullPolicy: "Always"
   component: "openldap"
 
@@ -20,7 +20,7 @@ openLdap:
 phpLdapAdmin:
   enabled: true
   image: "docker.io/osixia/phpldapadmin"
-  imageTag: "latest"
+  imageTag: "0.7.0"
   imagePullPolicy: "Always"
   component: "phpadmin"
 
