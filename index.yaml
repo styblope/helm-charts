@@ -3,9 +3,10 @@ entries:
   bookinfo:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2020-04-12T12:12:59.147154559+02:00
+    created: 2020-04-20T23:13:54.758289099+02:00
     description: The Istio example application
-    digest: ddae8c4daad8668d8a7523b2675ecfb2b80458a89ede190aa187ed40eeab2c06
+    digest: fe1683e03b6db4e4e547a54ab0048e7700a4aa1acae7a3cc9974c5045ff3896d
+    icon: https://raw.githubusercontent.com/styblope/helm-charts/master/bookinfo/icon.png
     keywords:
     - sample
     - bookinfo
@@ -17,7 +18,7 @@ entries:
     version: 0.2.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2020-04-12T12:12:59.146307662+02:00
+    created: 2020-04-20T23:13:54.756112342+02:00
     description: The Istio example application
     digest: a9141dbf958e4141200484185dcf4a844c8c4874efc32635cd20e8a4fda82b84
     keywords:
@@ -31,7 +32,7 @@ entries:
     version: 0.1.0
   guestbook-app:
   - apiVersion: v1
-    created: 2020-04-12T12:12:59.148102916+02:00
+    created: 2020-04-20T23:13:54.760742963+02:00
     description: A Helm chart for Kubernetes
     digest: 2b167aa24cfb29a66468505fbc0151e0141d722f0a846365fea418db94d907e2
     icon: https://raw.githubusercontent.com/styblope/helm-charts/master/guestbook-app/icon.png
@@ -41,9 +42,9 @@ entries:
     version: 0.1.0
   icp-openldap:
   - apiVersion: v1
-    created: 2020-04-12T12:12:59.149948847+02:00
+    created: 2020-04-20T23:13:54.765949698+02:00
     description: A OpenLDAP Chart for Kubernetes
-    digest: 6dd0e746b155b5ee1c1e35d19a10ebd852211fa51da6b1cfc57e9615cbb7a700
+    digest: f280218763c4ee532d455af20a84182439e5769a6bcc04f53aafd339795561ab
     engine: gotpl
     home: https://www.openldap.ort
     icon: https://raw.githubusercontent.com/styblope/helm-charts/master/icp-openldap/icon.png
@@ -59,7 +60,7 @@ entries:
     - https://raw.githubusercontent.com/styblope/helm-charts/master/icp-openldap-0.2.0.tgz
     version: 0.2.0
   - apiVersion: v1
-    created: 2020-04-12T12:12:59.149066637+02:00
+    created: 2020-04-20T23:13:54.763404397+02:00
     description: A OpenLDAP Chart for Kubernetes
     digest: f019e4763e443900ae6737c43cbc67a5bc62d3c06826c18f720dc06adfdc57b9
     engine: gotpl
@@ -78,7 +79,7 @@ entries:
     version: 0.1.5
   sock-shop:
   - apiVersion: v1
-    created: 2020-04-12T12:12:59.15109875+02:00
+    created: 2020-04-20T23:13:54.769630783+02:00
     description: A Helm chart for Sock Shop
     digest: 5a245d89a3192e88ee381a94c952e9601532eda0b70abdeef8b9704709ecb42a
     home: https://microservices-demo.github.io
@@ -89,4 +90,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/styblope/helm-charts/master/sock-shop-0.2.0.tgz
     version: 0.2.0
-generated: 2020-04-12T12:12:59.145353626+02:00
+generated: 2020-04-20T23:13:54.753514644+02:00

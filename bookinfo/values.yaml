@@ -1,15 +1,15 @@
 bookinfo-details:
-  version:
-  replicas:
+  version: v1
+  replicas: 1
 bookinfo-ratings:
-  version:
-  replicas:
+  version: v1
+  replicas: 1
 bookinfo-reviews:
-  version:
-  replicas:
+  version: v1
+  replicas: 1
 bookinfo-productpage:
-  version:
-  replicas:
+  version: v1
+  replicas: 1
 
 openshift-route:
   enabled: true
