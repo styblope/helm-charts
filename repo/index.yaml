@@ -3,9 +3,9 @@ entries:
   bookinfo:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-09-18T15:25:55.2850597+02:00"
+    created: "2020-09-18T15:34:26.067248291+02:00"
     description: The Istio example application
-    digest: 616d848d29eb4abba025102da7501b7aaca9f92c314c856eb9b0d79a6183ef57
+    digest: c0c4a0bae3c8594d8ed01db08b3484cb6456aa2c64c2f44682115f8174bd9f66
     icon: https://raw.githubusercontent.com/styblope/helm-charts/master/bookinfo/icon.png
     keywords:
     - sample
@@ -18,9 +18,9 @@ entries:
     version: 0.2.0
   guestbook-app:
   - apiVersion: v1
-    created: "2020-09-18T15:25:55.285698813+02:00"
+    created: "2020-09-18T15:34:26.068150618+02:00"
     description: A Helm chart for Kubernetes
-    digest: c97c995062f81d6ce0dab0729a32d79f894286dd86896bc19d1344bde3f05c7f
+    digest: 5aeb63c0ee6b5ac74d9f507b428b822fafebb1499cac34b4ba486b063620dcd9
     icon: https://raw.githubusercontent.com/styblope/helm-charts/master/guestbook-app/icon.png
     name: guestbook-app
     urls:
@@ -28,9 +28,9 @@ entries:
     version: 0.1.0
   icp-openldap:
   - apiVersion: v1
-    created: "2020-09-18T15:25:55.286335503+02:00"
+    created: "2020-09-18T15:34:26.068826817+02:00"
     description: A OpenLDAP Chart for Kubernetes
-    digest: c1d79550f0eceb4fe1837b5b1e07508bc7e155401f3212a38e1043b85bdcea22
+    digest: b8c9a4a3a2431829b42f4e9cdc66594da5276517d3dc4392134092e9c8fb8329
     engine: gotpl
     home: https://www.openldap.ort
     icon: https://raw.githubusercontent.com/styblope/helm-charts/master/icp-openldap/icon.png
@@ -47,9 +47,9 @@ entries:
     version: 0.2.0
   sock-shop:
   - apiVersion: v1
-    created: "2020-09-18T15:25:55.287031256+02:00"
+    created: "2020-09-18T15:34:26.069500177+02:00"
     description: A Helm chart for Sock Shop
-    digest: 5d85bc1777da362604a9d474b3711f7e0b6b8a0d44718b2ca9bfd1b12a23df54
+    digest: 3c2dfe5de077a303077d580fd626a80a22c33e0acaad24a06dff529038cfb9c5
     home: https://microservices-demo.github.io
     icon: https://raw.githubusercontent.com/styblope/helm-charts/master/sock-shop/icon.png
     name: sock-shop
@@ -58,4 +58,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/styblope/helm-charts/master/repo/sock-shop-0.2.0.tgz
     version: 0.2.0
-generated: "2020-09-18T15:25:55.283698234+02:00"
+generated: "2020-09-18T15:34:26.066035741+02:00"
