@@ -3,17 +3,10 @@ entries:
   bookinfo:
   - apiVersion: v1
     appVersion: "1.0"
-<<<<<<< HEAD
-    created: "2020-09-18T15:34:26.067248291+02:00"
+    created: "2020-09-18T15:41:07.377120275+02:00"
     description: The Istio example application
-    digest: c0c4a0bae3c8594d8ed01db08b3484cb6456aa2c64c2f44682115f8174bd9f66
+    digest: c30c66702f6c0136a66aab7f544e86b8a9dab15fbf3fe8664c4d9756fdd90f83
     icon: https://raw.githubusercontent.com/styblope/helm-charts/master/bookinfo/icon.png
-=======
-    created: "2020-09-18T15:29:08.938249627+02:00"
-    description: The Istio example application
-    digest: 3df8649f0a77ca0ca819f999eab90decaed914fbb5aa13661caf6fbef55253fb
-    icon: https://raw.githubusercontent.com/styblope/helm-charts/master/repo/bookinfo/icon.png
->>>>>>> b708f27... rebuild repo
     keywords:
     - sample
     - bookinfo
@@ -25,32 +18,19 @@ entries:
     version: 0.2.0
   guestbook-app:
   - apiVersion: v1
-<<<<<<< HEAD
-    created: "2020-09-18T15:34:26.068150618+02:00"
+    created: "2020-09-18T15:41:07.377760224+02:00"
     description: A Helm chart for Kubernetes
-    digest: 5aeb63c0ee6b5ac74d9f507b428b822fafebb1499cac34b4ba486b063620dcd9
+    digest: 9786c0ca0dd2828a4ab574ba376d599a692297fe71dee9485bb8022146872b83
     icon: https://raw.githubusercontent.com/styblope/helm-charts/master/guestbook-app/icon.png
-=======
-    created: "2020-09-18T15:29:08.938903228+02:00"
-    description: A Helm chart for Kubernetes
-    digest: bb516a4fc4f4e5e892354d5f0c710e57139073393cfa9c71ec0d8ca73c2c325a
-    icon: https://raw.githubusercontent.com/styblope/helm-charts/master/repo/guestbook-app/icon.png
->>>>>>> b708f27... rebuild repo
     name: guestbook-app
     urls:
     - https://raw.githubusercontent.com/styblope/helm-charts/master/repo/guestbook-app-0.1.0.tgz
     version: 0.1.0
   icp-openldap:
   - apiVersion: v1
-<<<<<<< HEAD
-    created: "2020-09-18T15:34:26.068826817+02:00"
+    created: "2020-09-18T15:41:07.37848199+02:00"
     description: A OpenLDAP Chart for Kubernetes
-    digest: b8c9a4a3a2431829b42f4e9cdc66594da5276517d3dc4392134092e9c8fb8329
-=======
-    created: "2020-09-18T15:29:08.939657696+02:00"
-    description: A OpenLDAP Chart for Kubernetes
-    digest: fae71cccb6383dc701f40e913a3f0dd31d05be8cff37ad153b52138673bf8a41
->>>>>>> b708f27... rebuild repo
+    digest: 30bc33a4b7e97967a37d874d2f0620891c3a853a14d8908f239f4f5afbbf486e
     engine: gotpl
     home: https://www.openldap.ort
     icon: https://raw.githubusercontent.com/styblope/helm-charts/master/icp-openldap/icon.png
@@ -67,15 +47,9 @@ entries:
     version: 0.2.0
   sock-shop:
   - apiVersion: v1
-<<<<<<< HEAD
-    created: "2020-09-18T15:34:26.069500177+02:00"
+    created: "2020-09-18T15:41:07.379114087+02:00"
     description: A Helm chart for Sock Shop
-    digest: 3c2dfe5de077a303077d580fd626a80a22c33e0acaad24a06dff529038cfb9c5
-=======
-    created: "2020-09-18T15:29:08.94027519+02:00"
-    description: A Helm chart for Sock Shop
-    digest: f784f20ff3958c732e3694bbb4c5dddbb221205d57db4b717dd5c338c52b7047
->>>>>>> b708f27... rebuild repo
+    digest: 6f4ebbb074f214e0eea23d48c7366d3a57a0c62aa57ced0379150d0aeaa2559d
     home: https://microservices-demo.github.io
     icon: https://raw.githubusercontent.com/styblope/helm-charts/master/sock-shop/icon.png
     name: sock-shop
@@ -84,8 +58,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/styblope/helm-charts/master/repo/sock-shop-0.2.0.tgz
     version: 0.2.0
-<<<<<<< HEAD
-generated: "2020-09-18T15:34:26.066035741+02:00"
-=======
-generated: "2020-09-18T15:29:08.937326422+02:00"
->>>>>>> b708f27... rebuild repo
+generated: "2020-09-18T15:41:07.376276898+02:00"
