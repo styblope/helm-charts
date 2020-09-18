@@ -13,7 +13,7 @@ default values below
 ```
 openLdap:
   image: "docker.io/osixia/openldap"
-  imageTag: "latest"
+  imageTag: "1.3.0"
   imagePullPolicy: "Always"
   component: "openldap"
 
