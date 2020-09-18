@@ -5,4 +5,4 @@ version: 0.2.0
 home: https://microservices-demo.github.io
 sources:
   - https://github.com/microservices-demo
-icon: https://raw.githubusercontent.com/styblope/helm-charts/master/sock-shop/icon.png
+icon: https://raw.githubusercontent.com/styblope/helm-charts/master/repo/sock-shop/icon.png

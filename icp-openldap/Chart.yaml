@@ -6,7 +6,7 @@ keywords: [ldap]
 home: https://www.openldap.ort
 sources:
   - https://github.com/openldap/openldap
-icon: https://raw.githubusercontent.com/styblope/helm-charts/master/icp-openldap/icon.png
+icon: https://raw.githubusercontent.com/styblope/helm-charts/master/repo/icp-openldap/icon.png
 maintainers:
   - name: Petr Styblo
     email: petr.styblo@cz.ibm.com
