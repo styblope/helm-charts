@@ -2,4 +2,4 @@ apiVersion: v1
 description: A Helm chart for Kubernetes
 name: guestbook-app
 version: 0.1.0
-icon: https://raw.githubusercontent.com/styblope/helm-charts/master/guestbook-app/icon.png
+icon: https://raw.githubusercontent.com/styblope/helm-charts/master/repo/guestbook-app/icon.png
