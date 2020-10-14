@@ -3,7 +3,7 @@ entries:
   bookinfo:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-09-18T15:41:07.377120275+02:00"
+    created: "2020-10-14T16:38:51.539769231+02:00"
     description: The Istio example application
     digest: c30c66702f6c0136a66aab7f544e86b8a9dab15fbf3fe8664c4d9756fdd90f83
     icon: https://raw.githubusercontent.com/styblope/helm-charts/master/bookinfo/icon.png
@@ -16,9 +16,28 @@ entries:
     urls:
     - https://raw.githubusercontent.com/styblope/helm-charts/master/repo/bookinfo-0.2.0.tgz
     version: 0.2.0
+  cp-openldap:
+  - apiVersion: v1
+    created: "2020-10-14T16:38:51.540469848+02:00"
+    description: OpenLDAP Chart for IBM Cloud Paks
+    digest: 4694b91d08964fc5a23e01696557e422483f890ebe991b759456479d4b8857eb
+    engine: gotpl
+    home: https://www.openldap.ort
+    icon: https://raw.githubusercontent.com/styblope/helm-charts/master/cp-openldap/icon.png
+    keywords:
+    - ldap
+    maintainers:
+    - email: petr.styblo@cz.ibm.com
+      name: Petr Styblo
+    name: cp-openldap
+    sources:
+    - https://github.com/openldap/openldap
+    urls:
+    - https://raw.githubusercontent.com/styblope/helm-charts/master/repo/cp-openldap-0.3.0.tgz
+    version: 0.3.0
   guestbook-app:
   - apiVersion: v1
-    created: "2020-09-18T15:41:07.377760224+02:00"
+    created: "2020-10-14T16:38:51.541233794+02:00"
     description: A Helm chart for Kubernetes
     digest: 9786c0ca0dd2828a4ab574ba376d599a692297fe71dee9485bb8022146872b83
     icon: https://raw.githubusercontent.com/styblope/helm-charts/master/guestbook-app/icon.png
@@ -28,7 +47,7 @@ entries:
     version: 0.1.0
   icp-openldap:
   - apiVersion: v1
-    created: "2020-09-18T15:41:07.37848199+02:00"
+    created: "2020-10-14T16:38:51.542621921+02:00"
     description: A OpenLDAP Chart for Kubernetes
     digest: 30bc33a4b7e97967a37d874d2f0620891c3a853a14d8908f239f4f5afbbf486e
     engine: gotpl
@@ -47,7 +66,7 @@ entries:
     version: 0.2.0
   sock-shop:
   - apiVersion: v1
-    created: "2020-09-18T15:41:07.379114087+02:00"
+    created: "2020-10-14T16:38:51.543298797+02:00"
     description: A Helm chart for Sock Shop
     digest: 6f4ebbb074f214e0eea23d48c7366d3a57a0c62aa57ced0379150d0aeaa2559d
     home: https://microservices-demo.github.io
@@ -58,4 +77,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/styblope/helm-charts/master/repo/sock-shop-0.2.0.tgz
     version: 0.2.0
-generated: "2020-09-18T15:41:07.376276898+02:00"
+generated: "2020-10-14T16:38:51.538957186+02:00"
