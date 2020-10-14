@@ -1,0 +1,44 @@
+{{- if .Values.phpLdapAdmin.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{.Release.Name}}-admin
+spec:
+{{- if .Values.phpLdapAdmin.nodePort }}
+  type: NodePort
+{{- end }}
+  ports:
+  - port: 80
+    targetPort: 80
+{{- if .Values.phpLdapAdmin.nodePort }}
+    nodePort: 31080
+{{- end }}
+  selector:
+    app: {{.Release.Name}}-admin
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{.Release.Name}}-admin
+spec:
+  selector:
+    matchLabels:
+      app: {{.Release.Name}}-admin
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: {{.Release.Name}}-admin
+    spec:
+      serviceAccountName: {{.Release.Name}}
+      containers:
+      - name: {{.Release.Name}}-admin
+        image: {{.Values.phpLdapAdmin.image}}:{{.Values.phpLdapAdmin.imageTag}}
+        ports:
+          - containerPort: 80
+        env:
+        - name: PHPLDAPADMIN_HTTPS
+          value: "{{.Values.openLdap.https}}"
+        - name: PHPLDAPADMIN_LDAP_HOSTS
+          value: "{{.Values.phpLdapAdmin.ldapEndpoint | default .Release.Name}}"
+{{- end -}}

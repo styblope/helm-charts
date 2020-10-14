@@ -1,0 +1,111 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{.Release.Name}}-seedusers
+data:
+  seedusers.ldif: |
+{{- include (print .Template.BasePath "/_seedusers2.ldif.tpl") . | indent 4 }}  
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: {{.Release.Name}}
+  name: {{.Release.Name}}
+spec:
+  ports:
+    - port: 389
+  selector:
+    app: {{.Release.Name}}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{.Release.Name}}
+  labels:
+    app: {{.Release.Name}}
+spec:
+  selector:
+    matchLabels:
+      app: {{.Release.Name}}
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: {{.Release.Name}}
+    spec:
+      serviceAccountName: {{.Release.Name}}
+      securityContext:
+        runAsUser: 0
+      initContainers:
+        - name: init-copy
+          image: {{.Values.openLdap.image}}:{{.Values.openLdap.imageTag}}
+          command: ['sh','-c','cp /config-map/* /config-storage; ls -lrt /config-storage']
+          volumeMounts:
+          - name: seedusers
+            mountPath: /config-map
+          - name: config-storage
+            mountPath: /config-storage
+      containers:
+        - name: openldap
+          image: {{.Values.openLdap.image}}:{{.Values.openLdap.imageTag}} 
+          command: ["sh", "-c", "touch /etc/ldap/slapd.conf && /container/tool/run --loglevel debug"]
+          #args: ["--copy-service", "--loglevel", "debug"]
+          volumeMounts:
+            - name: config-storage
+              mountPath: /container/service/slapd/assets/config/bootstrap/ldif/custom
+            - name: ldap-data
+              mountPath: /var/lib/ldap
+            - name: ldap-config
+              mountPath: /etc/ldap/slapd.d
+            - name: ldap-certs
+              mountPath: /container/service/slapd/assets/certs
+          ports:
+            - containerPort: 389
+            - containerPort: 636
+          env:
+            - name: LDAP_LOG_LEVEL
+              value: "256"
+            - name: LDAP_ORGANISATION
+              value: "Example Inc."
+            - name: LDAP_DOMAIN
+              value: "{{.Values.openLdap.domain}}"
+            - name: LDAP_ADMIN_PASSWORD
+              value: "{{.Values.openLdap.adminPassword}}"
+            - name: LDAP_REMOVE_CONFIG_AFTER_SETUP
+              value: "false"
+            - name: LDAP_TLS
+              value: "{{.Values.openLdap.https}}"
+      volumes:
+        - name: config-storage
+          emptyDir: {}
+        - name: ldap-data
+          emptyDir: {}
+        - name: ldap-config
+          emptyDir: {}
+        - name: ldap-certs
+          {{- if .Values.openLdap.persistence.enabled }}
+          persistentVolumeClaim:
+            claimName: {{.Release.Name}}-certs
+          {{- else }}
+          emptyDir: {}
+          {{- end }}
+        - name: seedusers
+          configMap:
+            name: {{.Release.Name}}-seedusers
+---
+{{- if .Values.openLdap.persistence.enabled }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{.Release.Name}}-certs
+spec:
+  {{- if .Values.openLdap.persistence.storageClassName }}
+  storageClassName: {{.Values.openLdap.persistence.storageClassName}}
+  {{- end }}
+  accessModes:
+    - {{.Values.openLdap.persistence.accessMode}}
+  resources:
+    requests:
+      storage: 1Mi
+{{- end }}

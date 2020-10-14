@@ -1,0 +1,26 @@
+openLdap:
+  image: "docker.io/osixia/openldap"
+  imageTag: "1.3.0"
+  imagePullPolicy: "Always"
+  component: "openldap"
+
+  domain: "local.io"
+  adminPassword: "admin"
+  https: "false"
+  seedUsers: 
+    usergroup: "cpusers"
+    userlist: "user1,user2,user3,user4"
+    initialPassword: "ChangeMe"
+  persistence:
+    enabled: true
+    storageClassName: ""
+    accessMode: ReadWriteOnce
+
+phpLdapAdmin:
+  enabled: true
+  image: "docker.io/osixia/phpldapadmin"
+  imageTag: "0.7.0"
+  imagePullPolicy: "Always"
+  component: "phpadmin"
+
+  nodePort: 31080
