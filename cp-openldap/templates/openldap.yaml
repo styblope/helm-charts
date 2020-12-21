@@ -49,8 +49,7 @@ spec:
       containers:
         - name: openldap
           image: {{.Values.openLdap.image}}:{{.Values.openLdap.imageTag}} 
-          command: ["sh", "-c", "touch /etc/ldap/slapd.conf && /container/tool/run --loglevel debug"]
-          #args: ["--copy-service", "--loglevel", "debug"]
+          command: ["sh", "-c", "touch /etc/ldap/slapd.conf && /container/tool/run --copy-service --loglevel debug"]
           volumeMounts:
             - name: config-storage
               mountPath: /container/service/slapd/assets/config/bootstrap/ldif/custom
